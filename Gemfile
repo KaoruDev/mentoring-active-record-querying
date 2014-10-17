@@ -42,3 +42,6 @@ gem 'pry-rails'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+group :development do
+  gem 'rspec-rails'
+end
