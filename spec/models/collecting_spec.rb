@@ -2,7 +2,7 @@ require "rails_helper"
 
 describe "Querying" do
   before do
-    require_relative "../../db/seeds"
+    SpecHelper.seed_db
   end
 
   it "has many posts" do
@@ -18,7 +18,7 @@ describe "Querying" do
   end
 
   it "returns all of the likes that are a user with email domenick.spinka@gmail.com post" do
-    result = User
+    result = "your query"
 
     ###################
     # DO NOT CODE BELOW THIS
@@ -33,7 +33,7 @@ describe "Querying" do
   end
 
   it "returns all of the posts alice@gmail.com commented on" do
-    result = User
+    result = "your query"
 
     ###################
     # DO NOT CODE BELOW THIS
@@ -48,7 +48,7 @@ describe "Querying" do
   end
 
   it "returns all of the users who commented on dorian.breitenberg@gmail.com's posts" do
-    result = User
+    result = "your query"
 
     ###################
     # DO NOT CODE BELOW THIS
@@ -63,7 +63,7 @@ describe "Querying" do
   end
 
   it "returns posts with more than 2 likes" do
-    result = Post
+    result = "your query"
 
     ###################
     # DO NOT CODE BELOW THIS
@@ -80,27 +80,27 @@ describe "Querying" do
 
   it "create a like on any one of edd@gmail.com's post by alice@gmail.com" do
 
-
     ###################
     # DO NOT CODE BELOW THIS
     ##################
+    alice = User.find_by(email: "alice@gmail.com")
 
-    result = User.find_by(email: "edd@gmail.com").posts.select do |post|
-      post.likes.where(user_id: 1).first
+    answer = User.find_by(email: "edd@gmail.com").posts.select do |post|
+      post.likes.where(user_id: alice.id).first
     end
 
-    expect(result.empty?).to be_falsely
+    expect(answer.empty?).to be_falsey
   end
 
   it "Return a post commented by domenick.spinka@gmail.com and liked by dorian.breitenberg@gmail.com" do
     # Your query goes here. You can assign variable etc until you find the post you need.
-    result = Post
+    result = "your query"
 
     ###################
     # DO NOT CODE BELOW THIS
     ##################
 
-    expect(result.id).to eq(6)
+    expect(result.id).to equal(6)
 
   end
 
