@@ -65,7 +65,7 @@ Comment.create(post_id: 6, user_id: 1, body: Faker::Lorem.paragraph(5))
 
 Comment.create(post_id: 2, user_id: 2, body: Faker::Lorem.paragraph(5))
 Comment.create(post_id: 6, user_id: 2, body: Faker::Lorem.paragraph(5))
-Comment.create(post_id: 8, user_id: 2, body: Faker::Lorem.paragraph(5))
+Comment.create(post_id: 9, user_id: 2, body: Faker::Lorem.paragraph(5))
 Comment.create(post_id: 10, user_id: 2, body: Faker::Lorem.paragraph(5))
 
 Comment.create(post_id: 8, user_id: 3, body: Faker::Lorem.paragraph(5))
