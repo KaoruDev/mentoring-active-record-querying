@@ -17,7 +17,7 @@ describe "Querying" do
     User.first.comments
   end
 
-  it "returns all of the likes that are a user with email domenick.spinka@gmail.com post" do
+  it "collect all of the likes on the posts of a user with email ( domenick.spinka@gmail.com )" do
     result = "your query"
 
     ###################
@@ -32,7 +32,7 @@ describe "Querying" do
     expect(answers.empty?).to eq(true)
   end
 
-  it "returns all of the posts alice@gmail.com commented on" do
+  it "collect all of the posts alice@gmail.com commented on" do
     result = "your query"
 
     ###################
@@ -47,7 +47,7 @@ describe "Querying" do
     expect(answers.empty?).to eq(true)
   end
 
-  it "returns all of the users who commented on dorian.breitenberg@gmail.com's posts" do
+  it "collect all of the users who commented on dorian.breitenberg@gmail.com's posts" do
     result = "your query"
 
     ###################
@@ -62,7 +62,7 @@ describe "Querying" do
     expect(answers.empty?).to eq(true)
   end
 
-  it "returns posts with more than 2 likes" do
+  it "collect posts with more than 2 likes" do
     result = "your query"
 
     ###################
@@ -78,7 +78,7 @@ describe "Querying" do
     expect(answers.empty?).to eq(true)
   end
 
-  it "create a like on any one of edd@gmail.com's post by alice@gmail.com" do
+  it "create a like record by alice@gmail.com on any one of edd@gmail.com's post" do
 
     ###################
     # DO NOT CODE BELOW THIS
