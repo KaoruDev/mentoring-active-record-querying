@@ -100,6 +100,7 @@ describe "Querying" do
     # DO NOT CODE BELOW THIS
     ##################
 
+    expect(result).to be_instance_of(Post)
     expect(result.id).to equal(6)
 
   end
