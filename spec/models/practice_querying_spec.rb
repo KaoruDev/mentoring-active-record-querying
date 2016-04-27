@@ -85,11 +85,11 @@ describe "Querying" do
     ##################
     alice = User.find_by(email: "alice@gmail.com")
 
-    answer = User.find_by(email: "edd@gmail.com").posts.select do |post|
+    answer = User.find_by(email: "edd@gmail.com").posts.find do |post|
       post.likes.where(user_id: alice.id).first
     end
 
-    expect(answer.empty?).to be_falsey
+    expect(answer).not_to be_nil
   end
 
   it "Return a post commented by domenick.spinka@gmail.com and liked by dorian.breitenberg@gmail.com" do
